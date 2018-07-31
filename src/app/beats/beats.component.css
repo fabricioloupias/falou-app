@@ -1,0 +1,12 @@
+.bg-portada{
+    background-image: url('../../assets/img/portada-fabricio-loupias.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 40% 95%; 
+    height: 450px;
+    background-color: black;
+}
+.row{
+    margin-top: -50px;
+    margin-bottom: 100px;
+}

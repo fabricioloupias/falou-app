@@ -1,0 +1,41 @@
+.example-small-box,
+.example-large-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.example-small-box {
+  height: 100px;
+  width: 100%;
+}
+
+.example-large-box {
+  height: 300px;
+  width: 100%;
+}
+
+img.perfil {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.mat-tab-group p {
+  margin: 0
+}
+.fa-spotify{
+    font-size: 20px
+}
+.mat-stroked-button{
+    border: 1px #1db954 solid;
+    line-height: 40px;
+    transition: 0.1s ease-in-out
+}
+.mat-stroked-button:hover{
+    background: #1db954;
+    color: white;
+}

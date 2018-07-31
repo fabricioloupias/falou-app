@@ -1,0 +1,88 @@
+#licencias .row:first-child{
+    margin-bottom: 50px;
+}
+#licencias .row:last-child{
+    margin-bottom: 100px;
+}
+#licencias .row .mat-card .card-header,
+#licencias .swiper-wrapper .card-header{
+    margin-top: -57px;
+    background: #009624;
+    border: none;
+    color: white;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+#licencias .row .mat-card,
+#licencias .swiper-wrapper .mat-card {
+    padding: 24px;
+    text-align: center;
+}
+
+#licencias .row .mat-card h4,
+#licencias .swiper-wrapper .mat-card h4 {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#licencias .row .mat-card img,
+#licencias .swiper-wrapper .mat-card img {
+    height: 64px;
+    margin-bottom: 40px;
+}
+
+#licencias .row .mat-card h3,
+#licencias .swiper-wrapper .mat-card h3 {
+    font-size: 34px;
+    margin-bottom: 20px;
+    ;
+}
+
+#licencias .row .mat-card ul,
+#licencias .swiper-wrapper .mat-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+#licencias .row .mat-card ul li,
+#licencias .swiper-wrapper .mat-card ul li {
+    font-size: 14px;
+    margin-bottom: 16px;
+    opacity: 0.87;
+}
+
+#licencias .row .mat-card hr,
+#licencias .swiper-wrapper .mat-card hr {
+    margin: 20px 0 20px 0;
+}
+
+#licencias .row .mat-card small,
+#licencias .swiper-wrapper .mat-card small {
+    margin-bottom: 30px;
+}
+
+#licencias .row .mat-card button.button1,
+#licencias .swiper-wrapper .mat-card button.button1 {
+    background: #0093C4;
+}
+#licencias .row .mat-card button{
+    margin-top: 20px;
+    width: 100%
+}
+#licencias .row .mat-card button.button2,
+#licencias .swiper-wrapper .mat-card button.button2 {
+    background: #C43C00;
+}
+
+#licencias .row .mat-card button.button3,
+#licencias .swiper-wrapper .mat-card button.button3 {
+    background: #009624;
+}
+
+#licencias .row .mat-card button.button4,
+#licencias .swiper-wrapper .mat-card button.button4 {
+    background: #12005E;
+}

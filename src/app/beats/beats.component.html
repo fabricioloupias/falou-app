@@ -1,0 +1,32 @@
+<div class="bg-portada">
+</div>
+<div class="container">
+  <div class="row justify-content-between" *ngFor="let info of channelInfo.items">
+    <div class="col-md-3">
+      <mat-card class="shadow">
+        <mat-card-subtitle>Suscribers</mat-card-subtitle>
+        <h4>{{info.statistics.subscriberCount}}</h4>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="shadow">
+        <mat-card-subtitle>Views</mat-card-subtitle>
+        <h4>{{info.statistics.viewCount}}</h4>
+      </mat-card>
+    </div>
+    <div class="col-md-3">
+      <mat-card class="shadow">
+        <mat-card-subtitle>Videos</mat-card-subtitle>
+        <h4>{{info.statistics.viewCount}}</h4>
+      </mat-card>
+    </div>
+  </div>
+  <h2>Beats</h2>
+  <div class="row my-5">
+    <div class="col-md-12">
+        <iframe src="//www.beatstars.com/player/?storeId=58280" scrolling="yes" width="100%" height="700" frameborder="0"
+          marginheight="0" marginwidth="0"> -- none -- </iframe>
+    </div>
+  </div>
+  <app-licences></app-licences>
+</div>

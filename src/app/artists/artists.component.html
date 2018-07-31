@@ -1,0 +1,29 @@
+<div class="container my-5">
+  <div class="row" *ngIf="dataArtist as artist">
+    <div class="col-md-3">
+      <img class="img-fluid perfil rounded shadow" src="{{artist.images[1].url}}" alt="">
+    </div>
+    <div class="col-md-3">
+      <h2>{{artist.name}}</h2>
+      <p>Latin, Reggaeton, Trap</p>
+      <a mat-stroked-button href="{{artist.external_urls.spotify}}" target="_blank"><i class="fab fa-spotify mr-2 align-text-bottom"></i>Play on Spotify</a>
+    </div>
+  </div>
+  <mat-tab-group dynamicHeight class="mt-5">
+    <mat-tab label="Music">
+        <h2 class="mt-5">Singles</h2>
+        <div class="row ml-0">
+          <div class="col-md-2 mt-4" *ngFor="let album of dataAlbums.items">
+            <img class="img-fluid rounded shadow mb-4" src="{{album.images[1].url}}" alt="">
+            <p>{{album.name}}</p>
+            <small>{{album.release_date}}</small>
+          </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Long tab">
+      <div class="example-large-box mat-elevation-z4">
+        Large content
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,35 @@
+.sidenav-container {
+  height: 100%;
+  z-index: 100;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+  
+}
+.mat-list-item{
+  color: rgba(0, 0, 0, 0.5);
+  border-left: 4px rgb(255, 255, 255) solid;
+  margin: 16px 0;
+}
+.active{
+  border-left: 4px red solid;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 16px 0;
+}
+.mat-icon{
+  margin-right: 15px
+}
+.mat-toolbar{
+  background:  rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+}
+.mat-toolbar.nav-top{
+  display: none;
+}
+@media only screen and (max-width: 600px){
+  .mat-toolbar.nav-top{
+    display: flex;
+  }
+}

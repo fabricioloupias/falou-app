@@ -1,0 +1,23 @@
+.bg-portada{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 40% 95%; 
+    height: 400px;
+    background-color: black;
+}
+.profile{
+    margin-top: 50px;
+}
+.profile img{
+    border-radius: 50%;
+}
+.profile h5{
+    display: inline-block;
+    font-size: 36px;
+    margin-bottom: 0;
+}
+.profile i{
+    font-size: 25px;
+    margin-left: 20px;
+    color: black;
+}
