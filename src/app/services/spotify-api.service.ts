@@ -8,14 +8,16 @@ import { tap, map } from 'rxjs/operators';
 })
 export class SpotifyApiService {
 
+  URI: string = 'http://localhost:3000/'
+
   constructor(private http: HttpClient) {}
   
   getArtist(){
-    return this.http.get('http://localhost:3000/spotify/artist')
+    return this.http.get(this.URI+'api/spotify/artist')
   }
 
   getAlbums(){
-    return this.http.get('http://localhost:3000/spotify/albums')
+    return this.http.get(this.URI+'api/spotify/albums')
   }
 
 
