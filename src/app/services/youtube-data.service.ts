@@ -10,7 +10,7 @@ import { interval, pipe } from 'rxjs';
 })
 export class YoutubeDataService {
 
-  
+  listVideos: any;
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +24,7 @@ export class YoutubeDataService {
   }
 
   getVideos(id){
-    return this.http.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+id+"&maxResults=8&order=date&key=AIzaSyCEl8WwJraLVIshXvjy24tckQtXtbJF8Bc")
+    return this.http.get("https://www.googleapis.com/youtube/v3/search?part=snippet&channelId="+id+"&maxResults=8&order=date&key=AIzaSyCEl8WwJraLVIshXvjy24tckQtXtbJF8Bc")   
   }
 
   addSubscription(resource) {

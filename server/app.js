@@ -56,7 +56,8 @@ var spotifyApi = new SpotifyWebApi({
         function(err) {
           console.error(err);
         }        
-      )   
+      )
+      
     },
     function(err) {
       console.log('Something went wrong when retrieving an access token', err);

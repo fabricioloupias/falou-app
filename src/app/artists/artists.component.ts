@@ -32,6 +32,7 @@ export class ArtistsComponent implements OnInit {
     this.spotifyS.getAlbums()
       .subscribe(data => {
         this.dataAlbums = data
+        console.log(this.dataAlbums)
       })
   }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { YoutubeDataService } from '../services/youtube-data.service'
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-youtube-videos',
@@ -17,7 +17,6 @@ export class YoutubeVideosComponent implements OnInit {
   channelInfo: any;
   channelSubscription: Subscription;
   id: string;
-  
   
 
   constructor(private ytData: YoutubeDataService) { }
@@ -49,10 +48,10 @@ export class YoutubeVideosComponent implements OnInit {
   }
 
   videosList(id){
-    this.listVideoSubscription = this.ytData.getVideos(id)
+    this.ytData.getVideos(id)
     .subscribe((res) => {
       this.videosInfo = res ;
-      // console.log(this.videosInfo)    
+        
     })
   }
 
@@ -61,6 +60,10 @@ export class YoutubeVideosComponent implements OnInit {
       .subscribe((res) => {
         console.log(res)
       })
+  }
+
+  ngOnDestroy() {
+    this.channelSubscription.unsubscribe()
   }
 
 }

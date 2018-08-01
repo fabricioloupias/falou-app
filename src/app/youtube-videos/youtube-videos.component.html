@@ -1,32 +1,45 @@
 <div class="">
   <div class="container">
-    <div class="profile mb-5" *ngFor="let info of channelInfo.items">
-      <div class="row align-items-center">
+    <div class="profile mb-5" *ngFor="let info of channelInfo?.items">
+      <div class="row align-items-top">
         <div class="col-md-1">
-            <img class="img-fluid" src="{{info.snippet.thumbnails.high.url}}" alt="">
+          <img class="img-fluid" src="{{info.snippet.thumbnails.high.url}}" alt="">
         </div>
         <div class="col-md-9">
-            <h5>{{info.snippet.title}}</h5>
-        </div>
-        <div class="col-md-2 text-right">
-          <!-- <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a> -->
-          <!-- <a href="" target="_blank"><i class="fab fa-instagram"></i></a> -->
-          <button mat-stroked-button (click)="addSubs()" color="warn">Suscribe</button>       
-        </div>
-      </div>    
-    </div>
-    
-      <h2 class="mb-2">Recent videos</h2>
-      <div>
-        <div class="row">
-          <div class="col-md-3 my-3" *ngFor="let video of videosInfo.items">
-            <div class="embed-responsive embed-responsive-16by9 shadow mb-2">
-              <iframe class="embed-responsive-item" [src]="video.id.videoId | safeUrl:'https://www.youtube.com/embed/'"></iframe>
+          <h5>{{info.snippet.title}}</h5>
+          <div class="row mt-3">
+            <div class="col-md-2">
+              <mat-card-subtitle>Suscribers</mat-card-subtitle>
+              <h4>{{info.statistics.subscriberCount}}</h4>
             </div>
-            <small>{{video.snippet.title}}</small>
+            <div class="col-md-2">
+              <mat-card-subtitle>Views</mat-card-subtitle>
+              <h4>{{info.statistics.viewCount}}</h4>
+            </div>
+            <div class="col-md-2">
+              <mat-card-subtitle>Videos</mat-card-subtitle>
+              <h4>{{info.statistics.viewCount}}</h4>
+            </div>
           </div>
         </div>
+        <div class="col-md-2 text-right">
+           <!-- <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a> 
+           <a href="" target="_blank"><i class="fab fa-instagram"></i></a>  -->
+          <button mat-stroked-button (click)="addSubs()" color="warn">Suscribe</button>
+        </div>
       </div>
-    
+    </div> 
+    <h2 class="mb-2">Recent videos</h2>
+    <div>
+      <div class="row">
+        <div class="col-md-3 my-3" *ngFor="let video of videosInfo?.items">
+          <div class="embed-responsive embed-responsive-16by9 shadow mb-2">
+            <iframe class="embed-responsive-item" [src]="video.id.videoId | safeUrl:'https://www.youtube.com/embed/'"></iframe>
+          </div>
+          <small>{{video.snippet.title}}</small>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
