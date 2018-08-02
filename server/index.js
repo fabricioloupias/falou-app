@@ -1,6 +1,8 @@
 var express = require('express');
 var cors = require('cors')
+var http = require('http');
 var app = express();
+var path = require('path');
 
 
 //Settings
@@ -23,8 +25,10 @@ app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
 app.get('*', function(req, res){
-    res.send('hello world');
+    res.sendFile(path.join(__dirname));
 });
+
+const server = http.createServer(app)
 
 app.listen(process.env.PORT, () => {
     console.log(`Server running`);
