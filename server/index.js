@@ -24,8 +24,7 @@ app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
 app.get('*', function(req, res){
-    res.send('hello world');
-    
+    res.sendFile(path.join(__dirname+ '/dist/falou-app/index.html'))   
 });
 
 app.listen(process.env.PORT, () => {
