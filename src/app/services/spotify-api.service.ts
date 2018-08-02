@@ -17,7 +17,7 @@ export class SpotifyApiService {
   }
 
   getAlbums(){
-    return this.http.get(this.URI+'api/spotify/albums')
+    return this.http.get('/api/spotify/albums')
   }
 
 
