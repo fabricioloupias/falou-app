@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-app.use(cors({origin: 'http://localhost:4200'}))
+app.use(cors({origin: ''}))
 
 //Routes
 app.use('/', require('./routes/api-spotify.route'));  
