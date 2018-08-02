@@ -24,7 +24,7 @@ app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
 app.get('*', function(req, res){
-    res.send(__dirname,'hello world');
+    res.send('hello world');
     
 });
 
