@@ -23,8 +23,8 @@ app.use('/', require('./routes/api-spotify.route'));
 app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
-app.get('*', function(req, res){
-    res.sendFile('../dist/falou-app/index.html', { root: __dirname })   
+app.get('/', function(req, res){
+    res.sendFile(path.join(__dirname+'/dist7falou-app/index.html')); 
 });
 
 app.listen(process.env.PORT, () => {
