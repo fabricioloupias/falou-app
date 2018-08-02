@@ -2,7 +2,7 @@
   "name": "falou-app",
   "version": "0.0.0",
   "scripts": {
-    "start": "node dist/server/app.js",
+    "start": "node server/app.js",
     "postinstall": "ng build --prod"
   },
   "engines": {
