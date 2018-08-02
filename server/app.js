@@ -19,9 +19,10 @@ app.use(cors({origin: 'http://localhost:4200'}))
 
 //Routes
 app.use('/', require('./routes/api-spotify.route'));  
+app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
-app.get('/', function(req, res){
+app.get('*', function(req, res){
     res.send('hello world');
 });
 

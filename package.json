@@ -2,7 +2,12 @@
   "name": "falou-app",
   "version": "0.0.0",
   "scripts": {
+    "ng": "ng",
     "start": "node server/app.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
     "postinstall": "ng build --prod"
   },
   "engines": {
