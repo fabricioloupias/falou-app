@@ -1,6 +1,5 @@
 var express = require('express');
 var cors = require('cors')
-var http = require('http');
 var app = express();
 var path = require('path');
 
@@ -17,7 +16,7 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Credentials', true);
     next();
 });
-app.use(cors({origin: 'https://still-gorge-51725.herokuapp.com/'}))
+app.use(cors({origin: ''}))
 
 //Routes
 app.use('/', require('./routes/api-spotify.route'));  
@@ -25,10 +24,9 @@ app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
 app.get('*', function(req, res){
-    res.sendFile(path.join(__dirname));
+    res.send(__dirname,'hello world');
+    
 });
-
-const server = http.createServer(app)
 
 app.listen(process.env.PORT, () => {
     console.log(`Server running`);
