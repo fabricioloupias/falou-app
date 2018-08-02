@@ -1,0 +1,45 @@
+[debug] [2018-08-01T22:19:42.059Z] ----------------------------------------------------------------------
+[debug] [2018-08-01T22:19:42.059Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\loupi\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only functions,hosting
+[debug] [2018-08-01T22:19:42.059Z] CLI Version:   3.19.3
+[debug] [2018-08-01T22:19:42.059Z] Platform:      win32
+[debug] [2018-08-01T22:19:42.059Z] Node Version:  v8.11.2
+[debug] [2018-08-01T22:19:42.059Z] Time:          Wed Aug 01 2018 19:19:42 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:42.059Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-08-01T22:19:42.075Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-08-01T22:19:42.075Z] > authorizing via signed-in user
+[debug] [2018-08-01T22:19:42.075Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/falou-music  
+  
+ Wed Aug 01 2018 19:19:42 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:43.238Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T22:19:43.238Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/falou-music/tokens  
+  
+ Wed Aug 01 2018 19:19:43 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:43.985Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T22:19:43.986Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/falou-music  
+  
+ Wed Aug 01 2018 19:19:43 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:46.746Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\loupi\Desktop\Angular_proyectos\falou-app'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-08-01T22:19:47.348Z] Fetching environment
+[debug] [2018-08-01T22:19:47.348Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/836503454396:getServerAppConfig  
+  
+ Wed Aug 01 2018 19:19:47 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:47.348Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/836503454396/clients/_:getWebAppConfig  
+  
+ Wed Aug 01 2018 19:19:47 GMT-0300 (Hora estándar de Argentina)
+[debug] [2018-08-01T22:19:48.652Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist/falou-app
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2018-08-01T22:19:49.301Z] <<< HTTP RESPONSE 200
+[debug] [2018-08-01T22:19:49.301Z] Starting @google-cloud/functions-emulator
+[debug] [2018-08-01T22:19:50.840Z] Parsing function triggers
+[info] +  functions: app: http://localhost:5001/falou-music/us-central1/app
+[info] [hosting] Rewriting /test to local function app
+[info] [hosting] Rewriting /test to local function app
+[info] [hosting] Rewriting /test to local function app
+[info] [hosting] Rewriting /test to local function app

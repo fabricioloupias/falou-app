@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/falou-app",
+    "rewrites": [{
+        "source": "/",
+        "function": "app"
+      }
+    ]
+  }
+}

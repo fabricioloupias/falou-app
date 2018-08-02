@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 var SpotifyWebApi = require('spotify-web-api-node');
 
-var SpotifyWebApi = require('spotify-web-api-node'); //https://github.com/thelinmichael/spotify-web-api-node
+var SpotifyWebApi = require('spotify-web-api-node'); //npm install spotify-web-api-node --save
 var clientId = 'b0909f7964c04dfb9631c5da40d52cd8',
   clientSecret = 'a262a3248a8844af8e8e3431042a93ab';
 

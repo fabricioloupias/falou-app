@@ -2,6 +2,7 @@ var express = require('express');
 var cors = require('cors')
 var app = express();
 
+
 //Settings
 app.set('port', process.env.PORT || 3000);
 
@@ -24,4 +25,6 @@ app.get('/', function(req, res){
     res.send('hello world');
 });
 
-app.listen(3000);
+app.listen(process.env.PORT, () => {
+    console.log(`Server running`);
+  });
