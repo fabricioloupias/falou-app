@@ -19,7 +19,7 @@ app.use(function (req, res, next) {
 app.use(cors({origin: ''}))
 
 //Routes
-app.use('/', require('./routes/api-spotify.route'));  
+app.use('/', require('./server/routes/api-spotify.route'));  
 app.use(express.static(__dirname + '/dist/falou-app'))
 
 //Start server
