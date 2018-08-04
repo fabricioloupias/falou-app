@@ -20,13 +20,16 @@ app.use(cors({origin: ''}))
 
 //Routes
 app.use('/', require('./server/routes/api-spotify.route'));  
-app.use(express.static(__dirname + '/dist/falou-app'))
+if(process.env.NODE_ENV === 'production'){
+    app.use(express.static(__dirname + '/dist/falou-app'))
+}
+
 
 //Start server
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname+'/dist7falou-app/index.html')); 
+app.get('*', function(req, res){
+    res.sendFile(path.join(__dirname,'/dist/falou-app','index.html')); 
 });
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log(`Server running`);
-  });
+});

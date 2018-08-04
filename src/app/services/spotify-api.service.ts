@@ -8,16 +8,18 @@ import { tap, map } from 'rxjs/operators';
 })
 export class SpotifyApiService {
 
-  URI: string = 'http://localhost:5001/falou-music/us-central1/app/'
+  URI: string = ''
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) {
+  }
+
   
   getArtist(){
-    return this.http.get('/api/spotify/artist')
+    return this.http.get(this.URI+'/api/spotify/artist')
   }
 
   getAlbums(){
-    return this.http.get('/api/spotify/albums')
+    return this.http.get(this.URI+'/api/spotify/albums')
   }
 
 
