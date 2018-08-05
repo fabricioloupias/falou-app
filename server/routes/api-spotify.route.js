@@ -53,6 +53,8 @@ router.get('/api/spotify/albums', (req, res) => {
 var id_ozuna = '1i8SpTcr7yvPOmcqrbnVXY';
 var id_daddy_yankee = '4VMYDCV2IEDYJArk749S6m';
 var id_nicky_jam = '1SupJlEpv7RS2tPNRaHViT';
+var id_jBalvin = '1vyhD5VmyZ7KMfW5gqLgo5';
+
 
 router.get('/api/spotify/top-tracks-artist/' + id_ozuna, (req, res) => {
   spotifyApi.getArtistTopTracks(id_ozuna, 'GB')
@@ -74,6 +76,15 @@ router.get('/api/spotify/top-tracks-artist/' + id_daddy_yankee, (req, res) => {
 
 router.get('/api/spotify/top-tracks-artist/' + id_nicky_jam, (req, res) => {
   spotifyApi.getArtistTopTracks(id_nicky_jam, 'GB')
+    .then(function (data) {
+      res.json(data.body)
+    }, function (err) {
+      console.log('Something went wrong!', err);
+    });
+})
+
+router.get('/api/spotify/top-tracks-artist/' + id_jBalvin, (req, res) => {
+  spotifyApi.getArtistTopTracks(id_jBalvin, 'GB')
     .then(function (data) {
       res.json(data.body)
     }, function (err) {

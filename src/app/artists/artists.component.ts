@@ -17,9 +17,11 @@ export class ArtistsComponent implements OnInit {
   id_ozuna: string = '1i8SpTcr7yvPOmcqrbnVXY';
   id_daddy_yankee: string = '4VMYDCV2IEDYJArk749S6m';
   id_nicky_jam: string = '1SupJlEpv7RS2tPNRaHViT';
+  id_jBalvin: string = '1vyhD5VmyZ7KMfW5gqLgo5';
   tracksOzuna: any
   tracksDaddy: any
   tracksNickyJam: any
+  tracksJBalvin: any
   dataArtistRelated: any;
   
 
@@ -33,13 +35,14 @@ export class ArtistsComponent implements OnInit {
     this.topTracksOzuna()
     this.topTracksDaddyYankee()
     this.topTracksNickyJam()
+    this.topTracksjBalvin()
     this.artistRelated()
   }
 
   getArtistData(){
     this.spotifyS.getArtist()
       .subscribe(data => {
-        this.showSpinner = false;
+       
         this.dataArtist = data
         //console.log(this.dataArtist)
       })
@@ -56,6 +59,7 @@ export class ArtistsComponent implements OnInit {
     this.spotifyS.getTopTracksOzuna(this.id_ozuna)
       .subscribe(data => {
         //console.log(data)
+        this.showSpinner = false;
         this.tracksOzuna = data
       })
     
@@ -64,6 +68,7 @@ export class ArtistsComponent implements OnInit {
   topTracksDaddyYankee(){
     this.spotifyS.getTopTracksDaddyYankee(this.id_daddy_yankee)
       .subscribe(data => {
+        this.showSpinner = false;
         //console.log(data)
         this.tracksDaddy = data
       })
@@ -72,8 +77,17 @@ export class ArtistsComponent implements OnInit {
   topTracksNickyJam(){
     this.spotifyS.getTopTracksNickyJam(this.id_nicky_jam)
       .subscribe(data => {
-        console.log(data)
+        //console.log(data)
+        this.showSpinner = false;
         this.tracksNickyJam = data
+      })
+  }
+  topTracksjBalvin(){
+    this.spotifyS.getTopTracksJBalvin(this.id_jBalvin)
+      .subscribe(data => {
+        this.showSpinner = false;
+        //console.log(data)
+        this.tracksJBalvin = data
       })
   }
 

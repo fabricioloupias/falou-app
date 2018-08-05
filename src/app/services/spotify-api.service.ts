@@ -8,6 +8,7 @@ import { tap, map } from 'rxjs/operators';
 })
 export class SpotifyApiService {
 
+  // URI: string = 'http://localhost:3000/'
   URI: string = ''
   id_artist:string
   topTracks: any
@@ -32,6 +33,9 @@ export class SpotifyApiService {
     return this.http.get(this.URI+'api/spotify/top-tracks-artist/'+id_artist)
   }
   getTopTracksNickyJam(id_artist){
+    return this.http.get(this.URI+'api/spotify/top-tracks-artist/'+id_artist)
+  }
+  getTopTracksJBalvin(id_artist){
     return this.http.get(this.URI+'api/spotify/top-tracks-artist/'+id_artist)
   }
 

@@ -14,8 +14,8 @@
   <mat-tab-group dynamicHeight class="mt-5">
     <mat-tab label="Music">
       <h2 class="mt-5">Singles</h2>
-      <div class="row ml-0 mb-5">
-        <div class="col-xl-2 col-lg-3 col-md-3 mt-4" *ngFor="let album of dataAlbums?.items">
+      <div class="row ml-0 mt-5">
+        <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4" *ngFor="let album of dataAlbums?.items">
           <img class="img-fluid rounded shadow mb-4" src="{{album.images[1].url}}" alt="">
           <p>{{album.name}}</p>
           <small>{{album.release_date}}</small>
@@ -29,19 +29,31 @@
       </mat-tab> -->
   </mat-tab-group>
   <h2 class="mt-5">Recommended</h2>
-  <div id="artistPerfil" class="row my-5">
-    <div class="col-md-2" *ngFor="let track of tracksOzuna?.tracks | slice:0:2; let i=index">
+  <app-spinner *ngIf="showSpinner"></app-spinner>
+  <div id="tracks" class="row my-5">
+    <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4" *ngFor="let track of tracksOzuna?.tracks | slice:0:2; let i=index">
       <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
       <p>{{track.name}}</p>
       <small>{{track.album.artists[0].name}}</small>
     </div>
-    <div class="col-md-2" *ngFor="let track of tracksDaddy?.tracks | slice:0:1; let i=index">
-      <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
+    <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4" *ngFor="let track of tracksDaddy?.tracks | slice:0:1; let i=index">
+      <a href="{{track.album.external_urls.spotify}}" target="_blank">
+        <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
+      </a>
       <p>{{track.name}}</p>
       <small>{{track.album.artists[0].name}}</small>
     </div>
-    <div class="col-md-2" *ngFor="let track of tracksNickyJam?.tracks | slice:1:3; let i=index">
-      <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
+    <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4" *ngFor="let track of tracksNickyJam?.tracks | slice:0:1; let i=index">
+      <a href="{{track.album.external_urls.spotify}}" target="_blank">
+        <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
+      </a>
+      <p>{{track.name}}</p>
+      <small>{{track.album.artists[0].name}}</small>
+    </div>
+    <div class="col-xl-2 col-lg-3 col-md-3 col-6 mb-4" *ngFor="let track of tracksJBalvin?.tracks | slice:4:6; let i=index">
+      <a href="{{track.album.external_urls.spotify}}" target="_blank">
+        <img class="img-fluid rounded shadow mb-4" src="{{track.album.images[1].url}}" alt="">
+      </a>
       <p>{{track.name}}</p>
       <small>{{track.album.artists[0].name}}</small>
     </div>
