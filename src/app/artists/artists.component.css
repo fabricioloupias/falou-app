@@ -27,15 +27,42 @@ img.perfil {
 .mat-tab-group p {
   margin: 0
 }
-.fa-spotify{
-    font-size: 20px
+
+.fa-spotify {
+  font-size: 20px
 }
-.mat-stroked-button{
-    border: 1px #1db954 solid;
-    line-height: 40px;
-    transition: 0.1s ease-in-out
+
+.mat-stroked-button {
+  border: 1px #1db954 solid;
+  line-height: 40px;
+  transition: 0.1s ease-in-out
 }
-.mat-stroked-button:hover{
-    background: #1db954;
-    color: white;
+
+.mat-stroked-button:hover {
+  background: #1db954;
+  color: white;
+}
+
+#artistPerfil img {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#artistPerfil p {
+  margin: 0
+}
+
+@media only screen and (max-width: 576px) {
+  img.perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+  }
+  h2 {
+    font-size: 26px
+  }
+  p {
+    font-size: 14px;
+  }
 }

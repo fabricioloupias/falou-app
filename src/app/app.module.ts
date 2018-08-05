@@ -21,7 +21,8 @@ import { LicencesComponent } from './licences/licences.component';
 import { BeatsComponent } from './beats/beats.component';
 import { YoutubeVideosComponent } from './youtube-videos/youtube-videos.component';
 import { SafeUrlPipe } from './safe-url.pipe';
-import { ArtistsComponent } from './artists/artists.component'
+import { ArtistsComponent } from './artists/artists.component';
+import { SpinnerComponent } from './ui/spinner/spinner.component';
 
 
 
@@ -34,7 +35,8 @@ import { ArtistsComponent } from './artists/artists.component'
     LicencesComponent,
     YoutubeVideosComponent,
     SafeUrlPipe,
-    ArtistsComponent
+    ArtistsComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

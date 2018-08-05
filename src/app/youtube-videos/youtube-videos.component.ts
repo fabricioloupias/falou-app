@@ -17,6 +17,7 @@ export class YoutubeVideosComponent implements OnInit {
   channelInfo: any;
   channelSubscription: Subscription;
   id: string;
+  showSpinner: boolean = true;
   
 
   constructor(private ytData: YoutubeDataService) { }
@@ -36,12 +37,12 @@ export class YoutubeVideosComponent implements OnInit {
     this.id = 'UCd6nwuYzs-7Sdoi3ciBCNMg'
     this.channel(this.id)
     this.videosList(this.id);
-    
   }
 
   channel(id){
     this.channelSubscription = this.ytData.getStats(id)
       .subscribe((data) => {
+        this.showSpinner = false
         this.channelInfo = data;
         // console.log(this.channelInfo)
       })

@@ -5,9 +5,19 @@ import { YoutubeVideosComponent } from './youtube-videos/youtube-videos.componen
 import { ArtistsComponent } from './artists/artists.component'
 
 const routes: Routes = [
-  { path: 'beats', component: BeatsComponent },
-  { path: 'videos', component: YoutubeVideosComponent },
-  { path: 'artists', component: ArtistsComponent }
+  { path: '',
+    redirectTo: '/beats',
+    pathMatch: 'full'
+  },
+  { path: 'beats', 
+    component: BeatsComponent 
+  },
+  { path: 'videos', 
+    component: YoutubeVideosComponent 
+  },
+  { path: 'artists', 
+    component: ArtistsComponent 
+  }
 ];
 
 @NgModule({

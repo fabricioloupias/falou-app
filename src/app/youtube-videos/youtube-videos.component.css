@@ -23,10 +23,13 @@
     color: black;
 }
 @media only screen and (max-width: 576px) {
+    .profile img{
+        width: 70px
+    }
     .profile h5{
-        font-size: 30px
+        font-size: 26px
     }
     .profile h4{
-        font-size: 20px
+        font-size: 18px
     }
 }

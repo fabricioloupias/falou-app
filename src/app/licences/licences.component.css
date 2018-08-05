@@ -33,6 +33,7 @@
     margin-bottom: 40px;
 }
 
+
 #licencias .row .mat-card h3,
 #licencias .swiper-wrapper .mat-card h3 {
     font-size: 34px;
@@ -67,22 +68,27 @@
 #licencias .row .mat-card button.button1,
 #licencias .swiper-wrapper .mat-card button.button1 {
     background: #0093C4;
-}
-#licencias .row .mat-card button{
+    width: 100%;
     margin-top: 20px;
-    width: 100%
 }
+
 #licencias .row .mat-card button.button2,
 #licencias .swiper-wrapper .mat-card button.button2 {
     background: #C43C00;
+    width: 100%;
+    margin-top: 20px;
 }
 
 #licencias .row .mat-card button.button3,
 #licencias .swiper-wrapper .mat-card button.button3 {
     background: #009624;
+    width: 100%;
+    margin-top: 20px;
 }
 
 #licencias .row .mat-card button.button4,
 #licencias .swiper-wrapper .mat-card button.button4 {
     background: #12005E;
+    width: 100%;
+    margin-top: 20px;
 }

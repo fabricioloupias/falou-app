@@ -28,6 +28,16 @@
 .mat-toolbar.nav-top{
   display: none;
 }
+.icon-social {
+  padding: 0 20px;
+  position: absolute;
+  bottom: 32px;
+  width: 100%
+}
+.icon-social img{
+  width: 20px; 
+  margin-right: 20px
+}
 @media only screen and (max-width: 600px){
   .mat-toolbar.nav-top{
     display: flex;

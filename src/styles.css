@@ -1,17 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
-html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', sans-serif; }
-.sidenav-container .mat-card{
-    border-radius: 12px;
+html,
+body {
+  height: 100%;
+  position: relative;
 }
-.sidenav-container a{
-    text-decoration: none;
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
-.container{
-    max-width: 1300px;
+
+.sidenav-container .mat-card {
+  border-radius: 12px;
 }
+
+.sidenav-container a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+}
+
 .modal-backdrop {
-    /* bug fix - no overlay */    
-    display: none;    
-  }
+  /* bug fix - no overlay */
+  display: none;
+}
+
