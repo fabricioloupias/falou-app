@@ -44,23 +44,15 @@ export class YoutubeVideosComponent implements OnInit {
       .subscribe((data) => {
         this.showSpinner = false
         this.channelInfo = data;
-        // console.log(this.channelInfo)
+        //console.log(this.channelInfo)
       })
   }
 
   videosList(id){
     this.ytData.getVideos(id)
     .subscribe((res) => {
-      this.videosInfo = res ;
-        
+      this.videosInfo = res ; 
     })
-  }
-
-  addSubs(){
-    this.ytData.addSubscription(this.resource)
-      .subscribe((res) => {
-        console.log(res)
-      })
   }
 
   ngOnDestroy() {
