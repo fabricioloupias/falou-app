@@ -22,6 +22,7 @@
     margin-left: 20px;
     color: black;
 }
+
 @media only screen and (max-width: 576px) {
     .profile img{
         width: 70px
@@ -32,4 +33,5 @@
     .profile h4{
         font-size: 18px
     }
+    
 }

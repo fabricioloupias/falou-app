@@ -1,12 +1,11 @@
-
 <div class="container">
-    <app-spinner *ngIf="showSpinner"></app-spinner>
+  <app-spinner *ngIf="showSpinner"></app-spinner>
   <div class="profile mb-5" *ngFor="let info of channelInfo?.items">
     <div class="row align-items-top">
       <div class="col-xl-1 col-lg-2 col-md-2 col-sm-3 col-3">
         <img class="" src="{{info.snippet.thumbnails.high.url}}" alt="">
       </div>
-      <div class="col-xl-11 col-lg-10 col-md-10 col-9">
+      <div class="col-xl-9 col-lg-8 col-md-10 col-sm-9 col-9 mb-3">
         <h5>{{info.snippet.title}}</h5>
         <div class="row mt-1">
           <div class="col-lg-2 col-md-4 col-4">
@@ -23,13 +22,10 @@
           </div>
         </div>
       </div>
-      <!--
-        <div class="col-md-2 text-right">
-            <a href="" target="_blank"><i class="fab fa-facebook-f"></i></a> 
-           <a href="" target="_blank"><i class="fab fa-instagram"></i></a>  
-          <button mat-stroked-button (click)="addSubs()" color="warn">Suscribe</button>
-        </div>
-        -->
+      <div class="col-xl-2 col-lg-2 col-md-12 col-12  align-self-center">
+        <a class="d-block" href="https://www.youtube.com/channel/UCd6nwuYzs-7Sdoi3ciBCNMg?sub_confirmation=1" target="_blank" mat-stroked-button
+          color="warn">Suscribe</a>
+      </div>
     </div>
   </div>
   <h2 class="mb-2">Recent videos</h2>
