@@ -14,6 +14,7 @@ var spotifyApi = new SpotifyWebApi({
 });
 
 // Retrieve an access token.
+/*
 spotifyApi.clientCredentialsGrant().then(
   function (data) {
     //console.log('The access token expires in ' + data.body['expires_in']);
@@ -26,6 +27,23 @@ spotifyApi.clientCredentialsGrant().then(
     console.log('Something went wrong when retrieving an access token', err);
   }
 );
+*/
+getoken();
+// Retrieve an access token.
+function getoken() {
+// Retrieve an access token.
+    spotifyApi.clientCredentialsGrant().then(
+        function (data) {
+            //console.log('The access token expires in ' + data.body['expires_in']);
+            //console.log('The access token is ' + data.body['access_token']);
+            spotifyApi.setAccessToken(data.body['access_token']);
+        },
+        function (err) {
+            //console.log('Something went wrong when retrieving an access token', err);
+        }
+    );
+}
+setInterval(getoken, 3600000);
 
 // Get an artist
 router.get('/api/spotify/artist', (req, res) => {
